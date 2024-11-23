@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { HeroesComponent } from './heroes/heroes.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [HeroesComponent],
   templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'tutorial-2';
+  title = 'Hero Editor';
 }
